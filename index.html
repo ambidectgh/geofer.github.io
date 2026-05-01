@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GEOFER</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #333;
+        }
+
+        /* Header & Navigation */
+        header {
+            background: white;
+            padding: 1rem 0;
+            position: sticky;
+            top: 0;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            z-index: 100;
+        }
+
+        nav {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0 2rem;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .logo h1 {
+            font-size: 1.8rem;
+            color: #0066cc;
+            font-weight: 700;
+            letter-spacing: 1px;
+        }
+
+        .nav-links {
+            display: flex;
+            list-style: none;
+            gap: 2rem;
+            align-items: center;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            color: #333;
+            font-weight: 500;
+            transition: color 0.3s ease;
+        }
+
+        .nav-links a:hover {
+            color: #0066cc;
+        }
+
+        .search-icon {
+            cursor: pointer;
+            font-size: 1.2rem;
+            color: #333;
+        }
+
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(135deg, rgba(0, 102, 204, 0.7) 0%, rgba(0, 79, 163, 0.7) 100%), 
+                        url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 600"><defs><linearGradient id="grad" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" style="stop-color:rgb(100,150,200);stop-opacity:0.6" /><stop offset="100%" style="stop-color:rgb(50,100,180);stop-opacity:0.6" /></linearGradient></linearGradient></defs><rect width="1200" height="600" fill="url(%23grad)"/></svg>');
+            background-size: cover;
+            background-position: center;
+            color: white;
+            padding: 6rem 2rem;
+            text-align: left;
+            position: relative;
+            min-height: 400px;
+            display: flex;
+            align-items: center;
+        }
+
+        .hero-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            width: 100%;
+        }
+
+        .hero h2 {
+            font-size: 3.5rem;
+            margin-bottom: 1rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+        }
+
+        .hero p {
+            font-size: 1.2rem;
+            margin-bottom: 2rem;
+            max-width: 600px;
+        }
+
+        .hero-btn {
+            background: white;
+            color: #0066cc;
+            border: 2px solid white;
+            padding: 0.8rem 1.8rem;
+            font-size: 1rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            border-radius: 4px;
+        }
+
+        .hero-btn:hover {
+            background: transparent;
+            color: white;
+        }
+
+        /* Wavy Divider */
+        .wavy-divider {
+            position: absolute;
+            bottom: -1px;
+            left: 0;
+            width: 100%;
+            height: 80px;
+            background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none"><path d="M0,40 Q300,80 600,40 T1200,40 L1200,120 L0,120 Z" fill="white"></path></svg>') repeat-x;
+            background-size: 600px 80px;
+        }
+
+        /* Mission Section */
+        .mission {
+            padding: 5rem 2rem;
+            text-align: center;
+            background: white;
+        }
+
+        .mission h2 {
+            font-size: 2.5rem;
+            color: #0066cc;
+            margin-bottom: 1rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .mission-subtitle {
+            font-size: 1.1rem;
+            color: #0066cc;
+            font-weight: 600;
+            margin-bottom: 2rem;
+        }
+
+        .divider {
+            width: 100px;
+            height: 2px;
+            background: #0066cc;
+            margin: 2rem auto;
+        }
+
+        .mission-content {
+            max-width: 900px;
+            margin: 3rem auto;
+            font-style: italic;
+            color: #666;
+            font-size: 1rem;
+            line-height: 1.8;
+        }
+
+        /* Main Content Section */
+        .content {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 3rem 2rem;
+        }
+
+        .content h2 {
+            font-size: 2rem;
+            color: #0066cc;
+            margin-bottom: 2rem;
+        }
+
+        /* Footer */
+        footer {
+            background: #004fa3;
+            color: white;
+            text-align: center;
+            padding: 2rem;
+            margin-top: 3rem;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .hero h2 {
+                font-size: 2rem;
+            }
+
+            .hero p {
+                font-size: 1rem;
+            }
+
+            .nav-links {
+                gap: 1rem;
+                font-size: 0.9rem;
+            }
+
+            nav {
+                padding: 0 1rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header Navigation -->
+    <header>
+        <nav>
+            <div class="logo">
+                <h1>GEOFER</h1>
+            </div>
+            <ul class="nav-links">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#aquifers">Aquifers</a></li>
+                <li><a href="#discover">Discover Aquifers</a></li>
+                <li><a href="#transparency">Transparency</a></li>
+            </ul>
+            <div class="search-icon">🔍</div>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-content">
+            <h2>Discover the Hidden World of Aquifers</h2>
+            <p>See how groundwater flows, learn how it's recharged, and explore ways to protect it.</p>
+            <button class="hero-btn">See How Aquifers Work</button>
+        </div>
+        <div class="wavy-divider"></div>
+    </section>
+
+    <!-- Mission Section -->
+    <section class="mission" id="mission">
+        <h2>Our Mission</h2>
+        <p class="mission-subtitle">Understanding and Preserving Our Groundwater Sources</p>
+        <div class="divider"></div>
+        <div class="mission-content">
+            <p>Welcome to GEOFER, this site helps raises awareness among young and old about the importance of aquifers in sustaining life and maintaining Earth's water balance.</p>
+        </div>
+    </section>
+
+    <!-- Content Area -->
+    <section class="content">
+        <h2>Content Area</h2>
+        <p>[Placeholder for additional content]</p>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2026 GEOFER. All rights reserved.</p>
+    </footer>
+</body>
+</html>
