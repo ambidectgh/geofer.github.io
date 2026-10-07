@@ -1,0 +1,73 @@
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  width: 100%;
+  min-height: 100%;
+  margin: 0;
+}
+
+.map-layout {
+  display: flex;
+  justify-content: flex-end;
+  height: 100vh;
+  height: 100dvh;
+  overflow: hidden;
+}
+
+.map {
+  display: block;
+  width: clamp(50vw, 72vw, 1200px);
+  height: 100%;
+  background: #e8eef0;
+}
+
+.aquifer-map-icon {
+  background: none;
+  border: 0;
+}
+
+.aquifer-map-icon svg {
+  display: block;
+  overflow: visible;
+  filter: drop-shadow(0 2px 2px rgb(0 0 0 / 35%));
+}
+
+.aquifer-popup h2 {
+  margin: 0 0 0.65rem;
+  color: #173b55;
+  font-size: 1rem;
+}
+
+.aquifer-popup__details {
+  line-height: 1.45;
+}
+
+.aquifer-popup__details img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+  margin: 0.6rem 0;
+  border-radius: 0.35rem;
+}
+
+.marker-cluster-small,
+.marker-cluster-medium,
+.marker-cluster-large {
+  background-color: rgb(20 113 170 / 25%);
+}
+
+.marker-cluster-small div,
+.marker-cluster-medium div,
+.marker-cluster-large div {
+  color: #fff;
+  background-color: #1471aa;
+}
+
+@media (max-width: 48rem) {
+  .map {
+    width: 100%;
+  }
+}

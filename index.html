@@ -1,25 +1,21 @@
 <!DOCTYPE html>
-<html> 
-
-<title>GeoFer</title>
-
-<body style ="background-color: #dddddd; padding: 20px;">
-    <header>
-        <h1 
-        style="color: #0077BE;
-        font-family: Helvetica; 
-        font-size: 50px; 
-        text-align: center;">
-        OUR MISSION
-    </h1>
-        
-        <p 
-        style="color: #0B1622; 
-        font-family: Helvetica; 
-        text-align: center;">
-        Welcome to GEOFER, this site helps raises awareness among young and old about the importance of aquifers in sustaining life and maintaining Earth's water balance. 
-    </p>
-    </header>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Aquifer Map</title>
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css">
+  <link rel="stylesheet" href="https://unpkg.com/leaflet.markercluster@1.5.3/dist/MarkerCluster.css">
+  <link rel="stylesheet" href="https://unpkg.com/leaflet.markercluster@1.5.3/dist/MarkerCluster.Default.css">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main class="map-layout">
+    <div id="map" class="map" role="application" aria-label="Interactive aquifer map"></div>
+  </main>
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+  <script src="https://unpkg.com/leaflet.markercluster@1.5.3/dist/leaflet.markercluster.js"></script>
+  <script src="locations.js"></script>
+  <script src="script.js"></script>
 </body>
-
 </html>
